@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.stage.Screen?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="${screen.visualBounds.height}" prefWidth="${screen.visualBounds.width}">
+
+    <fx:define>
+        <Screen fx:factory="getPrimary" fx:id="screen" />
+    </fx:define>
+    <children>
+        <Rectangle height="${screen.visualBounds.height}" width="${screen.visualBounds.width}" stroke="black" fill="black"/>
+
+        <GridPane maxHeight="Infinity" maxWidth="Infinity">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="25.0" hgrow="NEVER"/>
+                <ColumnConstraints percentWidth="25.0" hgrow="NEVER"/>
+                <ColumnConstraints percentWidth="25.0" hgrow="NEVER"/>
+                <ColumnConstraints percentWidth="25.0" hgrow="NEVER"/>
+            </columnConstraints>
+
+                <HBox fx:id="quitHBox" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                </HBox>
+            <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="2">
+                <Text stroke="white" fill="white" text="" fx:id="updateBox">
+                    <font><Font name="Arial Black" size="40.0" /></font>
+                </Text>
+            </HBox>
+
+
+                <StackPane GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2">
+                    <Rectangle width="600" height="600" stroke="red" fill="red"></Rectangle>
+                <VBox alignment="TOP_CENTER">
+                    <Text stroke="white" fill="white" text="P1" fx:id="p1Name">
+                        <font><Font name="Arial Black" size="40.0" /></font>
+                    </Text>
+                    <Text stroke="white" fill="white" text="0" fx:id="p1Score">
+                        <font><Font name="Arial Black" size="100.0" /></font>
+                    </Text>
+                </VBox>
+                </StackPane>
+
+                <StackPane GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.columnSpan="2">
+                    <Rectangle width="600" height="600" stroke="blue" fill="blue"></Rectangle>
+                <VBox alignment="TOP_CENTER">
+                    <Text stroke="white" fill="white" text="P2" fx:id="p2Name">
+                        <font><Font name="Arial Black" size="40.0" /></font>
+                    </Text>
+                    <Text stroke="white" fill="white" text="0" fx:id="p2Score">
+                        <font><Font name="Arial Black" size="100.0" /></font>
+                    </Text>
+                </VBox>
+                </StackPane>
+
+            <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.columnSpan="2">
+                <Text stroke="white" fill="white" text="21" fx:id="maxScore">
+                    <font><Font name="Arial Black" size="40.0" /></font>
+                </Text>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.columnSpan="1" fx:id="restartButtonHBox">
+            </HBox>
+
+        </GridPane>
+    </children>
+</AnchorPane>
